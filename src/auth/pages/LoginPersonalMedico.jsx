@@ -5,7 +5,7 @@ import { Button, Grid, Link, TextField, Typography, Alert } from '@mui/material'
 import { AuthLayout } from '../layout/AuthLayout';
 import { api } from '../../services/api';
 
-export const LoginPage = () => {
+export const LoginPersonalMedico = () => {
   const [nombreUsuario, setNombreUsuario] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
@@ -16,7 +16,7 @@ export const LoginPage = () => {
     setError(null); // Clear previous errors
 
     try {
-      const response = await fetch(`${api}api/auth/medico`, {
+      const response = await fetch(`${api}api/auth/personalMedico`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -32,13 +32,13 @@ export const LoginPage = () => {
       console.log(data);
 
       // Suponiendo que la respuesta contiene un token o información del usuario
-      navigate('/dashboard');
+      navigate('/personalMedico');
     } catch (error) {
       setError('Usuario no reconocido');
     }
   };
-  const handleNavigateToPersonalMedico = () => {
-    navigate('/auth/personalMedico');
+  const handleNavigateToLogin = () => {
+    navigate('/auth/login');
   };
   return (
     <AuthLayout title="Iniciar Sesion">
@@ -80,12 +80,12 @@ export const LoginPage = () => {
                     Ingresar
                   </Button>
                 </Grid>
-                <Grid item xs={12} sm={6}>
-                  <Button onClick={handleNavigateToPersonalMedico} variant='contained' fullWidth>
-                    P.Medico
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                  <Button onClick={handleNavigateToLogin} variant='contained' fullWidth>
+                    Medico
                   </Button>
                 </Grid>
-              </Grid>
             </Grid>
           </form>
         </Grid>

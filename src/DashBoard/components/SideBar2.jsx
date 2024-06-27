@@ -2,7 +2,7 @@ import { Box, Divider, Drawer, Grid, List, ListItem, ListItemButton, ListItemIco
 import { TurnedInNot } from '@mui/icons-material';
 import { Link as RouterLink } from 'react-router-dom'; // Importa RouterLink de react-router-dom
 
-export const SideBar = ({ drawerWidth = 240 }) => {
+export const SideBar2 = ({ drawerWidth = 240 }) => {
   return (
     <Box
       component='nav'
@@ -26,9 +26,8 @@ export const SideBar = ({ drawerWidth = 240 }) => {
         <List>
           {
             [
-              { text: 'Ver emergencias', link: '/emergencias' },
-              { text: 'Registrar tratamiento', link: '/registrar-tratamiento' },
-              { text: 'Historial tratamientos', link: '/historial-tratamientos' }
+              { text: 'Registrar emergencia', link: '/registrar-emergencia' },
+              { text: 'Historial emergencias', link: '/historial-emergencias' }
             ].map(item => (
               <ListItem key={item.text} disablePadding>
                 <ListItemButton component={RouterLink} to={item.link}>
@@ -45,4 +44,3 @@ export const SideBar = ({ drawerWidth = 240 }) => {
     </Box>
   )
 }
-
