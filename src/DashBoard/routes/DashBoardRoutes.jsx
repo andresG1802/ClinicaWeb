@@ -8,6 +8,8 @@ import ViewTratamientosPage from "../pages/ViewTratamientos"
 import { DashBoardPersonalMedicoPage } from "../pages/DashBoardPersonalMedicoPage"
 import { ViewHistorialEmergenciasPage } from "../pages/ViewHistorialEmergencias"
 import RegisterEmergenciaPage from "../pages/RegisterEmergencia"
+import RegisterPacientePage from "../pages/RegisterPaciente"
+import ViewPacientesPage from "../pages/ViewPacientes"
 
 
 export const DashBoardRoutes = () => {
@@ -23,6 +25,9 @@ export const DashBoardRoutes = () => {
 
         <Route path="/registrar-emergencia" element={ <RegisterEmergenciaPage /> } />
         <Route path="/historial-emergencias" element={ <ViewHistorialEmergenciasPage /> } />
+
+        <Route path="/registrar-paciente" element={ <RegisterPacientePage /> } />
+        <Route path="/ver-paciente" element={ <ViewPacientesPage /> } />
     
     </Routes>
   )

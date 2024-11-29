@@ -18,7 +18,7 @@ export const SideBar2 = ({ drawerWidth = 240 }) => {
       >
         <Toolbar>
           <Typography variant='h6' noWrap component='div'>
-            Andres Galvan
+            Personal Medico
           </Typography>
         </Toolbar>
         <Divider />
@@ -27,7 +27,9 @@ export const SideBar2 = ({ drawerWidth = 240 }) => {
           {
             [
               { text: 'Registrar emergencia', link: '/registrar-emergencia' },
-              { text: 'Historial emergencias', link: '/historial-emergencias' }
+              { text: 'Historial emergencias', link: '/historial-emergencias' },
+              { text: 'Ver pacientes', link: '/ver-paciente' },
+              { text: 'Registrar pacientes', link: '/registrar-paciente' }
             ].map(item => (
               <ListItem key={item.text} disablePadding>
                 <ListItemButton component={RouterLink} to={item.link}>

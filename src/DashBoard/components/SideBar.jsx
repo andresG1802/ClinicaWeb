@@ -18,7 +18,7 @@ export const SideBar = ({ drawerWidth = 240 }) => {
       >
         <Toolbar>
           <Typography variant='h6' noWrap component='div'>
-            Andres Galvan
+            Medico
           </Typography>
         </Toolbar>
         <Divider />
